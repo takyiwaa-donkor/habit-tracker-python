@@ -1,0 +1,9 @@
+name: habit-tracker
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - colorama
+

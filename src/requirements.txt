@@ -1,0 +1,6 @@
+colorama
+pandas
+jupyter
+notebook
+ipykernel
+pytest

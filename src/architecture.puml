@@ -1,0 +1,52 @@
+@startuml
+title Habit Tracker - System Architecture
+
+package "Domain Layer" {
+    class Habit {
+        - id: int
+        - name: string
+        - frequency: string
+        - is_quantitative: bool
+        - max_entries_per_period: int
+        + validate_value(value)
+    }
+
+    class HabitEntry {
+        - id: int
+        - habit_id: int
+        - entry_date: date
+        - value: float
+    }
+}
+
+package "Persistence Layer" {
+    class Repository {
+        + add_habit(habit)
+        + get_all_habits()
+        + add_habit_entry(entry)
+        + get_entries_by_habit(habit_id)
+    }
+}
+
+package "Application Layer" {
+    class HabitController {
+        - repository: Repository
+        + list_habits()
+        + record_entry(habit_id, value)
+        + get_longest_streak(habit_id)
+    }
+}
+
+package "Analytics Layer" {
+    class Analysis {
+        + calculate_longest_streak(entries, frequency)
+        + calculate_current_streak(entries, frequency)
+    }
+}
+
+HabitController --> Repository
+Repository --> Habit
+Repository --> HabitEntry
+HabitController --> Analysis
+
+@enduml
