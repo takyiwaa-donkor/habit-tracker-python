@@ -4,63 +4,62 @@ The system evolved from a simple CLI tracker into a fully functional analytics p
 
 The architecture is built around:
 
-Layered modular design
+- Layered modular design
 
-SQLite persistence
+- SQLite persistence
 
-Object‑oriented domain modelling
+- Object‑oriented domain modelling
 
-Functional analytics
+- Functional analytics
 
-Extensive testing (pytest + manual)
+- Extensive testing (pytest + manual)
 
 The project was developed across three phases: Conception → Implementation → Finalization, each documented in detail.
 
 **Key Features**
 Habit Management
-Predefined habits with configurable units (liters, hours, minutes, etc.)
+- Predefined habits with configurable units (liters, hours, minutes, etc.)
 
-Daily and weekly tracking
+- Daily and weekly tracking
 
-Multiple entries per day for quantitative habits
+- Multiple entries per day for quantitative habits
 
-Validation for numeric and binary habits
+- Validation for numeric and binary habits
 
 Analytics Engine
-longest_streak()
+- longest_streak()
 
-current_streak()
+- current_streak()
 
-streak_statistics()
+- streak_statistics()
 
-daily_report()
+- daily_report()
 
-weekly_report()
+- weekly_report()
 
-monthly_report()
+- monthly_report()
 
-habit_leaderboard()
+- habit_leaderboard()
 
 Data Persistence
-SQLite database (habit.db)
+- SQLite database (habit.db)
 
-Transactional integrity
+- Transactional integrity
 
-Efficient querying for streaks and reports
+- Efficient querying for streaks and reports
 
-Repository pattern for clean data access
+- Repository pattern for clean data access
 
 CLI Interface
-11‑option interactive menu
+- 11‑option interactive menu
 
-Clear navigation and input validation
+- Clear navigation and input validation
 
-Real‑time analytics and reporting
+- Real‑time analytics and reporting
 
 **System Architecture**
 The application follows a strict layered architecture:
 
-Code
 Presentation Layer (CLI)
     ↓
 Controller Layer (HabitController)
@@ -72,79 +71,80 @@ Analytics Layer (analysis.py)
 Persistence Layer (repository.py, database.py)
     ↓
 SQLite Database (habit.db)
+
 Why this architecture?
-Clear separation of concerns
+- Clear separation of concerns
 
-Easy to extend (GUI, web app, mobile app)
+- Easy to extend (GUI, web app, mobile app)
 
-Independent testing of each layer
+- Independent testing of each layer
 
-No circular dependencies
+- No circular dependencies
 
-Scalable for long‑term data growth
+- Scalable for long‑term data growth
 
 **Data Model**
 Core Entities
-Habit → static definition (name, frequency, validation rules)
+- Habit → static definition (name, frequency, validation rules)
 
-HabitEntry → time‑specific record (value, unit, timestamp)
+- HabitEntry → time‑specific record (value, unit, timestamp)
 
 This one‑to‑many structure ensures:
 
-Normalized data
+- Normalized data
 
-Efficient historical queries
+- Efficient historical queries
 
-Accurate streak calculations
+- Accurate streak calculations
 
 Storage
 SQLite chosen for:
 
-zero‑configuration setup
+- zero‑configuration setup
 
-full SQL support
+- full SQL support
 
-transactional integrity
+- transactional integrity
 
-seamless Python integration
+- seamless Python integration
 
 **Analytics and Reporting**
 The system provides a full analytics suite:
 
-Longest streak
+- Longest streak
 
-Current streak
+- Current streak
 
-Max/min/average streak
+- Max/min/average streak
 
-Daily completion report
+- Daily completion report
 
-Weekly performance summary
+- Weekly performance summary
 
-Monthly trend analysis
+- Monthly trend analysis
 
-Habit leaderboard
+- Habit leaderboard
 
 Dummy data covering 30+ days was generated to validate analytics and ensure realistic performance.
 
 **Testing**
 Testing included:
 
-Automated tests (pytest)
+- Automated tests (pytest)
 
-Manual CLI testing
+- Manual CLI testing
 
-Database read/write validation
+- Database read/write validation
 
-Edge case handling:
+- Edge case handling:
 
-skipped days
+   - skipped days
 
-overlapping entries
+   - overlapping entries
 
-multi‑entry habits
+   - multi‑entry habits
 
-invalid input
+   - invalid input
 
 All analytics functions were implemented, tested, and integrated successfully.
 
@@ -162,7 +162,6 @@ python main.py
 SQLite initializes automatically on first run.
 
 **Repository Structure**
-Code
 habit-tracker/
 │
 ├── main.py
