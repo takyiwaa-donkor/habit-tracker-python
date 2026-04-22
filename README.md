@@ -188,39 +188,39 @@ habit-tracker/
 **Progress vs Original Plan**
 Planned (Phase 1):
 
-Simple CLI tracker
+- Simple CLI tracker
 
-Basic habit recording
+- Basic habit recording
 
-No persistence
+- No persistence
 
 Achieved (Final Version):
 
-Full SQLite integration
+- Full SQLite integration
 
-Modular multi‑layer architecture
+- Modular multi‑layer architecture
 
-Complete analytics engine
+- Complete analytics engine
 
-Daily/weekly/monthly reports
+- Daily/weekly/monthly reports
 
-Leaderboard + streak statistics
+- Leaderboard + streak statistics
 
-Robust input validation
+- Robust input validation
 
-Extensive testing
+- Extensive testing
 
 The system grew far beyond the initial concept, becoming a scalable productivity tool.
 
 **Future Improvements**
-Graphical User Interface (GUI)
+- Graphical User Interface (GUI)
 
-User‑defined habits
+- User‑defined habits
 
-Data visualization (charts, graphs)
+- Data visualization (charts, graphs)
 
-Mobile or web version
+- Mobile or web version
 
-Notification reminders
+- Notification reminders
 
-Cloud synchronization
+- Cloud synchronization
