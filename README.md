@@ -1,4 +1,5 @@
 **Habit Tracking Application – Python and SQLite**
+
 A modular, analytics‑driven habit tracking system built in Python, designed to help users monitor daily and weekly habits, analyze performance trends, and maintain long‑term consistency.
 This project demonstrates clean architecture, database integration, functional analytics, and a fully interactive CLI workflow.
 
