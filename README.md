@@ -162,28 +162,47 @@ python main.py
 SQLite initializes automatically on first run.
 
 **Repository Structure**
-habit-tracker/
+habit_tracker/
 │
-├── main.py
-├── cli.py
-├── controller.py
-├── database.py
-├── repository.py
-├── models/
-│   ├── habit.py
-│   └── habit_entry.py
 ├── analytics/
-│   └── analysis.py
-├── data/
-│   └── habit.db
-├── tests/
-│   └── test_cases.py
-└── docs/
-    ├── HabitTracker_Abstract.pdf
-    ├── HabitTracker_Phase1.pdf
-    ├── HabitTracker_Phase2.pdf
-    ├── HabitTracker_FinalReport.pdf
-    └── HabitTracker_UserManual.pdf
+│   └── analysis.py                 # Analytics functions: streaks, reports, leaderboard
+│
+├── application/
+│   ├── cli.py                      # Command-line interface
+│   └── controller.py               # HabitController (business logic)
+│
+├── domain/
+│   ├── habit.py                    # Habit model (definition + rules)
+│   └── habit_entry.py              # HabitEntry model (tracking records)
+│
+├── persistence/
+│   ├── database.py                 # SQLite connection + setup
+│   └── repository.py               # Data access layer (CRUD operations)
+│
+├── unit_tests/
+│   └── test_cases.py               # Automated tests (pytest)
+│
+├── docs/
+│   ├── Final Report.docx
+│   ├── Reflections.md
+│   └── User Manual.docx
+│
+├── screenshots/
+│   └── *.png                       # CLI screenshots for documentation
+│
+├── architecture.puml               # UML architecture diagram
+├── config.py                       # Global configuration settings
+├── environment.yml                 # Conda environment file
+├── requirements.txt                # Python dependencies
+├── habit.db                        # SQLite database (live data)
+├── habits.db                       # Legacy/test database
+├── habit_tracker.log               # Application log file
+├── habit_tracker_auto_units.py     # Auto-unit helper script
+├── main.py                         # Application entry point
+├── pytest.ini                      # Pytest configuration
+├── .gitignore                      # Git ignore rules
+└── README.md                       # Project documentation
+
     
 **Progress vs Original Plan**
 Planned (Phase 1):
